@@ -6,6 +6,8 @@ import com.example.demo.deber14.modelo.Automovil;
 
 public interface IAutomovilRepo {
 	public void insertar(Automovil automovil);
+	public void eliminarMarca(String marca);
+	public void actualizarMarca(String marca, String modelo, Integer numeroPuertas);
 	
 	//Typed Query
 	public Automovil buscarPlacaTyped(String placa);

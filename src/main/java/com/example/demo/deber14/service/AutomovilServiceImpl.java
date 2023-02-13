@@ -92,4 +92,17 @@ public class AutomovilServiceImpl implements IAutomovilService {
 		return this.automovilRepo.buscarTraccionNamedNative(traccion);
 	}
 
+	@Override
+	public void eliminarMarca(String marca) {
+		// TODO Auto-generated method stub
+		this.automovilRepo.eliminarMarca(marca);
+	}
+
+	@Override
+	public void actualizarMarca(String marca, String modelo, Integer numeroPuertas) {
+		// TODO Auto-generated method stub
+		this.automovilRepo.actualizarMarca(marca, modelo, numeroPuertas);
+		
+	}
+
 }

@@ -118,4 +118,24 @@ public class AutomovilRepoImpl implements IAutomovilRepo {
 		return query.getResultList();
 	}
 
+	@Override
+	public void eliminarMarca(String marca) {
+		// TODO Auto-generated method stub
+		Query query = this.entityManager.createQuery(
+				"DELETE FROM Automovil a WHERE a.marca=:datoMarca");
+		query.setParameter("datoMarca", marca);
+		query.executeUpdate();
+	}
+
+	@Override
+	public void actualizarMarca(String marca, String modelo, Integer numeroPuertas) {
+		// TODO Auto-generated method stub
+		Query query = this.entityManager.createQuery(
+				"UPDATE Automovil a SET a.modelo=:datoModelo, a.numeroPuertas=:datoNumPuertas WHERE a.marca=:datoMarca");
+		query.setParameter("datoMarca", marca);
+		query.setParameter("datoModelo", modelo);
+		query.setParameter("datoNumPuertas", numeroPuertas);
+		query.executeUpdate();
+	}
+
 }

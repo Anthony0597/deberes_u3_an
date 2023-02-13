@@ -5,7 +5,9 @@ import java.util.List;
 import com.example.demo.deber14.modelo.Automovil;
 
 public interface IAutomovilService {
-public void agregar(Automovil automovil);
+	public void agregar(Automovil automovil);
+	public void eliminarMarca(String marca);
+	public void actualizarMarca(String marca, String modelo, Integer numeroPuertas);
 	
 	//Typed Query
 	public Automovil buscarPlacaTyped(String placa);
